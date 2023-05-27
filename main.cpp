@@ -4,8 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+    QMainWindow *mw = new QMainWindow(0, Qt::Window);
+    mw->setWindowTitle("Hello, QT 5");
+    mw->resize(400, 300);
+    mw->show();
+    return app.exec();
 }
